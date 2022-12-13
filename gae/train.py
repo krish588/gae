@@ -39,7 +39,8 @@ dataset_str = FLAGS.dataset
 
 # Load data
 adj, features = load_data(dataset_str)
-
+print(adj)
+print(features)
 # Store original adjacency matrix (without diagonal entries) for later
 adj_orig = adj
 adj_orig = adj_orig - sp.dia_matrix((adj_orig.diagonal()[np.newaxis, :], [0]), shape=adj_orig.shape)
